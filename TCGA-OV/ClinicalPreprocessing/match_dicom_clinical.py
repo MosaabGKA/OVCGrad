@@ -9,10 +9,10 @@ from pydicom.errors import InvalidDicomError
 # ------------------------------------------------------------------
 # Configuration
 # ------------------------------------------------------------------
-CLINICAL_JSON = "clinical.project-tcga-ov.2026-03-15.json"  # your clinical data
-ANNOTATIONS_JSON = "annotations.2026-03-15.json"            # your annotations file
-IMAGES_FOLDER = "../ImageCollection/dicom_images"           # folder with .dcm files
-OUTPUT_CSV = "image_clinical_annotation_map.csv"
+CLINICAL_JSON = "RawData/clinical.project-tcga-ov.2026-03-15.json"      # your clinical data
+ANNOTATIONS_JSON = "RawData/annotations.2026-03-15.json"        # your annotations file
+IMAGES_FOLDER = "../ImageCollection/dicom_images"               # folder with .dcm files
+OUTPUT_CSV = "ProcessedData/image_clinical_annotation_map.csv"
 
 # ------------------------------------------------------------------
 # Helper: extract patient ID from DICOM filename

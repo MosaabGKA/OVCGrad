@@ -1,6 +1,4 @@
-import json
-import csv
-from collections import defaultdict
+import json, csv
 
 # ------------------------------------------------------------
 # Helper to safely get a field, returning empty string if missing
@@ -19,17 +17,17 @@ def flatten_list(lst):
 # ------------------------------------------------------------
 # Load JSON data
 # ------------------------------------------------------------
-with open("clinical.project-tcga-ov.2026-03-15.json", "r", encoding="utf-8") as f:
+with open("RawData/clinical.project-tcga-ov.2026-03-15.json", "r", encoding="utf-8") as f:
     cases = json.load(f)
 
 # ------------------------------------------------------------
 # Prepare CSV writers and files
 # ------------------------------------------------------------
-patients_file = open("patients.csv", "w", newline="", encoding="utf-8")
-diagnoses_file = open("diagnoses.csv", "w", newline="", encoding="utf-8")
-treatments_file = open("treatments.csv", "w", newline="", encoding="utf-8")
-pathology_file = open("pathology_details.csv", "w", newline="", encoding="utf-8")
-followups_file = open("follow_ups.csv", "w", newline="", encoding="utf-8")
+patients_file = open("ProcessedData/patients.csv", "w", newline="", encoding="utf-8")
+diagnoses_file = open("ProcessedData/diagnoses.csv", "w", newline="", encoding="utf-8")
+treatments_file = open("ProcessedData/treatments.csv", "w", newline="", encoding="utf-8")
+pathology_file = open("ProcessedData/pathology_details.csv", "w", newline="", encoding="utf-8")
+followups_file = open("ProcessedData/follow_ups.csv", "w", newline="", encoding="utf-8")
 
 patients_writer = None
 diagnoses_writer = None
